@@ -1,0 +1,25 @@
+ESTRELAMOTION AI — protótipo com backend para geração real
+
+IMPORTANTE
+- Este ZIP contém uma interface e rotas de backend preparadas para chamar a API do Hugging Face.
+- A geração só funcionará quando o projeto estiver hospedado/executado num ambiente Node.js com um token HF_TOKEN válido e permissões para Inference Providers.
+- Não é uma IA treinada do zero, não está hospedada por este ZIP e não oferece geração ilimitada grátis.
+- A geração de vídeo depende de um provedor compatível (o código tenta fal-ai com Wan-AI/Wan2.2-TI2V-5B); pode exigir configuração/créditos e pode falhar se não houver acesso.
+- Nunca coloques HF_TOKEN no HTML, nunca o publiques e nunca o envies por mensagem.
+
+COMO EXECUTAR NUM AMBIENTE COM NODE.JS 20+
+1. Extrai o ZIP.
+2. No terminal, dentro da pasta do projeto, executa: npm install
+3. Define HF_TOKEN como variável de ambiente/secreto no ambiente de hospedagem (não dentro de index.html).
+4. Executa: npm start
+5. Abre a URL fornecida pelo ambiente de hospedagem.
+
+ENDPOINTS
+GET /api/status
+POST /api/image {"prompt":"..."}
+POST /api/video {"prompt":"..."}
+
+MODELO DE IMAGEM PADRÃO
+black-forest-labs/FLUX.1-schnell. A disponibilidade e o custo dependem dos Inference Providers e das configurações da conta.
+
+ESTE ZIP NÃO FOI TESTADO COM UM TOKEN REAL. Antes de chamar a integração de “conectada”, gera uma imagem de teste e confirma que o servidor responde com sucesso.
